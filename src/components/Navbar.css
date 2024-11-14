@@ -1,0 +1,208 @@
+/* src/components/Navbar.css */
+
+/* Navbar Layout */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Increased horizontal padding */
+  background-color: #1f2023; /* Darker background color */
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav h1 {
+  color: #f3ce13;
+  margin: 0;
+  font-size: 1.8em; /* Increased font size */
+  font-family: 'Arial', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+             0 0 20px rgba(0, 0, 0, 0.7),
+             0 0 30px rgba(0, 0, 0, 0.6);
+  transition: text-shadow 0.3s ease; /* Smooth transition */
+}
+
+nav h1:hover {
+  text-shadow: 0 0 5px rgba(243, 206, 19, 0.6), 
+               0 0 10px rgba(243, 206, 19, 0.5), 
+               0 0 15px rgba(243, 206, 19, 0.4); 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* Increased margin for spacing */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+  font-weight: bold; /* Bold links */
+  transition: color 0.3s, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+  color: #f3ce13; /* Change color on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.nav-button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Link color */
+  font-weight: bold; /* Bold links */
+  transition: color 0.3s, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-button:hover {
+  color: #f3ce13;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Search Form Layout */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+.search-form input {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 2px solid #f3ce13;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Soft glow around input */
+  width: 250px; /* Fixed width for consistency */
+}
+
+.search-form input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Brighten glow on focus */
+}
+
+.search-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3ce13;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Soft glow around button */
+}
+
+.search-form button:hover {
+  background-color: #f3ce13;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.8); /* Brighter glow on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background-color: #333333; /* Darker nav bar for dark mode */
+}
+
+body.dark-mode .search-form input {
+  border-color: #e0e0e0;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+body.dark-mode .search-form input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+}
+
+body.dark-mode .search-form button {
+  color: white;
+  background-color: rgb(36, 29, 29);
+}
+
+body.dark-mode .search-form button:hover {
+  background-color: rgb(36, 29, 29);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.8);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .search-form {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .search-form input {
+    width: 70%;
+  }
+
+  .search-form button {
+    width: 25%;
+  }
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch.on {
+  background-color: #f3ce13;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch.on .slider {
+  transform: translateX(26px);
+}

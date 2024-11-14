@@ -1,0 +1,19 @@
+/* src/components/Toast.css */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .toast.fade-out {
+    opacity: 0;
+  }
+  

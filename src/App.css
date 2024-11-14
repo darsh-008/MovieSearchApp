@@ -1,0 +1,54 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.App {
+  text-align: center;
+}
+
+.search-page, .bookmarks-page {
+  padding: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 150px; /* Set a fixed width for the cards */
+}
+
+.movie-card img {
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.bookmark-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc; /* Default star color */
+  transition: color 0.3s;
+}
+
+.bookmark-button.bookmarked {
+  color: gold; /* Filled star color when bookmarked */
+}
+
+.bookmark-button:hover {
+  color: orange;
+}
+

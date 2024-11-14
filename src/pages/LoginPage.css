@@ -1,0 +1,155 @@
+/* Center the login page and add a subtle background color */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f2f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles for login page */
+body.dark-mode .login-page {
+    background: #121212; /* Darker background for dark mode */
+}
+
+/* Styling for the auth container (the form card) */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode styles for auth container */
+body.dark-mode .auth-container {
+    background: #333333; /* Dark background for form */
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2); /* Lighter shadow for dark mode */
+}
+
+/* Styling for the headings */
+.auth-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles for headings */
+body.dark-mode .auth-container h2 {
+    color: #e0e0e0; /* Lighter text color for dark mode */
+}
+
+.input-container {
+    position: relative;
+    margin: 12px 0;
+}
+
+.input-container::before {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    pointer-events: none;
+}
+
+/* Dark mode styles for input container icons */
+body.dark-mode .input-container::before {
+    color: #e0e0e0; /* Lighter icon color */
+}
+
+.input-container.email::before {
+    content: "✉️"; /* Email icon */
+}
+
+.input-container.password::before {
+    content: "🔒"; /* Lock icon */
+}
+
+/* Styling for the input fields */
+.auth-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Dark mode styles for input fields */
+body.dark-mode .auth-input {
+    background-color: #444444; /* Dark background for inputs */
+    border-color: #555555; /* Darker border */
+    color: #e0e0e0; /* Lighter text color */
+}
+
+/* Focus effect */
+.auth-input:focus {
+    border-color: #3b82f6;
+}
+
+/* Dark mode styles for focused input */
+body.dark-mode .auth-input:focus {
+    border-color: #ffa500; /* Lighter border on focus for dark mode */
+}
+
+/* Styling for the auth button */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    font-size: 16px;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Dark mode styles for auth button */
+body.dark-mode .auth-button {
+    background-color: #ffa500; /* Orange button in dark mode */
+}
+
+/* Hover effect for button */
+.auth-button:hover {
+    background-color: black;
+}
+
+/* Dark mode hover effect for button */
+body.dark-mode .auth-button:hover {
+    background-color: #333; /* Darker button hover effect */
+}
+
+/* Styling for the toggle link */
+.toggle-link {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Dark mode styles for toggle link */
+body.dark-mode .toggle-link {
+    color: #e0e0e0; /* Lighter link color */
+}
+
+.toggle-link:hover {
+    color: #3b82f6;
+}
+
+/* Dark mode styles for toggle link hover */
+body.dark-mode .toggle-link:hover {
+    color: #ffa500; /* Lighter color on hover in dark mode */
+}
